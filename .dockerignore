@@ -1,14 +1,30 @@
+# Bytecode / cache
 __pycache__/
 *.py[cod]
-*.pyc
 *.pyo
 *.pyd
+
+# Python virtualenvs
+.env/
+.venv/
+*.env
 .Python
-.env
-.git/
-.gitignore
-Dockerfile
+
+# Logs & DBs
+*.log
 *.db
 *.sqlite3
-*.log
-static/plots/
+
+# Git & Docker junk
+.git/
+.gitignore
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# OS/system files
+.DS_Store
+Thumbs.db
+
+# FastF1 cache (if you ever accidentally un-ignore it)
+fastf1_cache/
