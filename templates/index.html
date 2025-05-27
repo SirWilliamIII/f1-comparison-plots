@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>F1 Telemetry Compare</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="form-box">
+    <h3>Select Your Comparison</h2>
+      <form method="POST">
+        <label for="year">Year:</label>
+        <select name="year" id="year">
+          {% for year in years %}
+          <option value="{{ year }}">{{ year }}</option>
+          {% endfor %}
+        </select>
+
+        <label for="race">Race:</label>
+        <select name="race" id="race">
+          {% for race in races %}
+          <option value="{{ race }}">{{ race }}</option>
+          {% endfor %}
+        </select>
+
+        <label for="session">Session:</label>
+        <select name="session" id="session">
+          {% for sess in sessions %}
+          <option value="{{ sess }}">{{ sess }}</option>
+          {% endfor %}
+        </select>
+
+        <label for="driver1">Driver 1:</label>
+        <select name="driver1" id="driver1">
+          {% for d in drivers %}
+          <option value="{{ d }}">{{ d }}</option>
+          {% endfor %}
+        </select>
+
+        <label for="driver2">Driver 2:</label>
+        <select name="driver2" id="driver2">
+          {% for d in drivers %}
+          <option value="{{ d }}">{{ d }}</option>
+          {% endfor %}
+        </select>
+
+        <button id="compare-button" type="submit">Compare</button>
+      </form>
+  </div>
+</body>
+
+</html>
